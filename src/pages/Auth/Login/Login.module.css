@@ -1,0 +1,102 @@
+.container {
+  background-color: #ffffff;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+.left {
+  width: 65%;
+  height: 100vh;
+}
+.left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 35%;
+  padding: 0 50px;
+}
+
+.titeWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.titeWrapper h1 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.titeWrapper p {
+  font-size: 18px;
+  color: #a4a1aa;
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.rememberForgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rememberForgot a {
+  color: #131118;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.backButton {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: #131118;
+  width: max-content;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  padding: 0 20px;
+  font-weight: 700;
+  drop-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  user-select: none;
+  gap: 10px;
+}
+
+.backButton:hover {
+  background-color: #1d1d1d;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+  }
+  .left {
+    display: none;
+  }
+  .right {
+    width: 100%;
+  }
+  .right .titeWrapper {
+    text-align: center;
+  }
+}

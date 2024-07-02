@@ -1,0 +1,43 @@
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.label {
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.input {
+  border: 1px solid #131118;
+  border-radius: 10px;
+  font-size: 16;
+  transition: border-color 0.3s;
+  padding: 20px 16px;
+  width: 100%;
+}
+
+.inputWrapper > .passwordIcon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: fill 0.3s;
+}
+
+.inputWrapper > .passwordIcon:hover {
+  fill: #000000;
+}
+
+.input:focus {
+  border-color: #000000;
+  outline: none;
+}

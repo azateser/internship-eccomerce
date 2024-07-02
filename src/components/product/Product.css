@@ -1,0 +1,59 @@
+.product {
+  @apply relative w-max;
+}
+
+.product .image {
+  @apply cursor-pointer;
+}
+
+.product .image .category {
+  @apply absolute top-4 left-4 bg-primary text-white px-2 py-1 rounded-lg text-sm opacity-70 transition-all;
+}
+
+.product .image .background {
+  @apply absolute w-[300px] h-[350px] bg-primary rounded-md opacity-0 transition-all top-0 left-0;
+}
+
+.product .image .actions {
+  @apply flex-col justify-between hidden absolute top-0 left-0 w-full h-[350px];
+}
+
+.product .image .actions .icons {
+  @apply flex flex-col justify-center p-4 items-end gap-4 text-gray-600;
+}
+
+.product .image .actions .icons button {
+  @apply hover:scale-110 transition-all shadow-lg bg-white w-8 h-8 rounded-full flex items-center justify-center;
+}
+
+.product .image .add-to-cart {
+  @apply pb-5 w-full px-4;
+}
+
+.product .image img {
+  @apply rounded-md;
+}
+
+.product .detail {
+  @apply flex flex-col mt-4;
+}
+
+.product .detail h2 {
+  @apply font-bold text-xl;
+}
+
+.product .detail p {
+  @apply text-sm text-gray-600;
+}
+
+.product .detail .prices {
+  @apply flex gap-2 items-center;
+}
+
+.product .detail span {
+  @apply font-bold text-lg;
+}
+
+.product .detail span.old-price {
+  @apply font-normal text-sm line-through text-gray-400;
+}

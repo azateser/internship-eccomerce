@@ -1,0 +1,74 @@
+footer{
+    @apply bg-primary text-[#C4C4C5]
+}
+
+footer .container{
+    @apply grid md:grid-cols-4 grid-cols-1 max-w-7xl m-auto py-12 px-10 md:px-0
+}
+
+footer .details{
+    @apply md:block hidden
+}
+
+footer .details .logo{
+    @apply text-3xl font-bold mb-8
+}
+
+footer .details ul{
+    @apply flex flex-col gap-5 text-lg
+}
+
+footer .details li{
+    @apply flex items-center gap-2
+}
+
+footer .menu{
+    @apply md:block hidden
+}
+
+footer .menu h2{
+    @apply text-lg font-bold text-white mb-4
+}
+
+footer .menu ul{
+    @apply flex flex-col gap-2
+}
+
+footer .menu li{
+    @apply hover:text-white transition-all cursor-pointer
+}
+
+footer .subscribe{
+    @apply md:block hidden
+}
+
+footer .subscribe h2{
+    @apply text-lg font-bold text-white mb-4
+}
+
+footer .subscribe form{
+    @apply flex gap-2 mt-4 relative
+}
+
+footer .subscribe form .icon{
+    @apply absolute top-[50%] left-3 transform -translate-y-1/2
+}
+
+footer .subscribe input{
+    @apply bg-primary focus:outline-[#B8B7B9] border-solid border-[#2D2B31] border-[1px] rounded-lg text-white px-10 py-4 w-full
+}
+
+footer .subscribe button{
+    @apply hover:translate-x-1 transition-all absolute top-[50%] right-3 transform -translate-y-1/2 text-white
+}
+
+footer .rights{
+    @apply flex items-center py-4 md:justify-between justify-center max-w-7xl m-auto border-t-[1px] border-[#2D2B31] border-solid
+}
+footer .rights .image{
+    @apply md:block hidden
+}
+
+footer .rights .social{
+    @apply items-center gap-4 md:flex hidden
+}

@@ -1,0 +1,23 @@
+.categoires {
+  @apply max-w-7xl m-auto md:px-0 px-4 mb-32;
+}
+
+.categoires h1 {
+  @apply text-2xl mb-8;
+}
+
+.categoires .item-class {
+  @apply md:px-2 px-0 first:pl-0 last:pr-0;
+}
+
+.categoires .item {
+  @apply select-none relative w-full rounded-xl cursor-pointer;
+}
+
+.categoires .item img {
+  @apply select-none pointer-events-none w-full  h-72 object-cover rounded-xl;
+}
+
+.categoires .item div {
+  @apply select-none transition-all absolute bottom-4 left-[50%] transform -translate-x-1/2 bg-white w-10/12 text-center py-2 rounded-lg;
+}
