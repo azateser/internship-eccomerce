@@ -1,9 +1,13 @@
 .product {
-  @apply relative w-max;
+  @apply  md:w-max w-full;
 }
 
 .product .image {
-  @apply cursor-pointer;
+  @apply cursor-pointer w-[300px] h-[350px] relative;
+}
+
+.product .image img{
+  @apply h-full object-cover w-full;
 }
 
 .product .image .category {
@@ -11,11 +15,11 @@
 }
 
 .product .image .background {
-  @apply absolute w-[300px] h-[350px] bg-primary rounded-md opacity-0 transition-all top-0 left-0;
+  @apply absolute w-full h-full bg-primary rounded-md opacity-0 transition-all top-0 left-0;
 }
 
 .product .image .actions {
-  @apply flex-col justify-between hidden absolute top-0 left-0 w-full h-[350px];
+  @apply flex-col justify-between hidden absolute top-0 left-0 w-full h-full;
 }
 
 .product .image .actions .icons {

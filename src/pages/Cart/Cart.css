@@ -1,0 +1,116 @@
+.cart-container {
+  @apply max-w-7xl m-auto md:px-0 px-4 mb-20 my-4;
+}
+
+.cart-container .title h1 {
+  @apply text-4xl;
+}
+
+.cart-container .content {
+  @apply grid grid-cols-7 gap-8 mt-6;
+}
+
+.cart-container .content .items {
+  @apply text-4xl col-span-5;
+}
+
+.cart-container .content .items table {
+  @apply w-full text-base;
+}
+
+.cart-container .content .items .price {
+  @apply text-lg font-bold;
+}
+
+.cart-container .content .items .delete svg {
+  @apply hover:text-red-500 text-red-400 cursor-pointer hover:scale-110 transition-all;
+}
+
+.cart-container .content .items table thead {
+  @apply border-b border-solid border-gray-300;
+}
+
+.cart-container .content .items th {
+  @apply text-start py-2;
+}
+
+tr {
+  @apply grid grid-cols-12;
+}
+
+td {
+  @apply flex items-center;
+}
+
+th:nth-child(1),
+td:nth-child(1) {
+  @apply col-span-5;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  @apply col-span-2;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+  @apply col-span-2;
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+  @apply col-span-2;
+}
+
+th:nth-child(5),
+td:nth-child(5) {
+  @apply col-span-1;
+}
+
+.cart-container .content .items td {
+  @apply text-start align-middle py-4;
+}
+
+.cart-container .content .items .counts {
+  @apply !h-12 w-3/4;
+}
+
+.cart-container .content .items .counts button {
+  @apply !h-12 text-base;
+}
+
+.cart-container .content .items .counts span {
+  @apply !h-12 text-lg;
+}
+
+.cart-container .content .items table .cart-product {
+  @apply flex items-center gap-4;
+}
+
+.cart-container .content .items table .cart-product h3 {
+  @apply text-lg font-semibold mb-4;
+}
+
+.cart-container .content .items table .cart-product .details {
+  @apply flex flex-col justify-between;
+}
+
+.cart-container .content .items table .cart-product img {
+  @apply rounded-lg max-w-24 max-h-24;
+}
+
+.cart-container .content .subtotal {
+  @apply sticky top-24 col-span-2 border border-gray-200 border-solid rounded-lg p-4 h-max;
+}
+
+.cart-container .content .subtotal .title {
+  @apply flex items-center justify-between mb-8 py-4 border-b border-solid border-gray-200;
+}
+
+.cart-container .content .subtotal h3 {
+  @apply text-2xl font-semibold;
+}
+
+.cart-container .content .subtotal p {
+  @apply text-xl font-normal;
+}

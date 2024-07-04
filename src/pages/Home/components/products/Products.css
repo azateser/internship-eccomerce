@@ -1,5 +1,5 @@
 .products {
-  @apply max-w-7xl m-auto md:px-0 px-4;
+  @apply max-w-7xl m-auto md:px-0 px-4 mb-20;
 }
 
 .products h1 {

@@ -55,7 +55,7 @@ export const authSlice = createSlice({
       state.loading = false;
       state.error = "Login Error!";
     });
-  }
+  },
 });
 
 export const { setToken } = authSlice.actions;

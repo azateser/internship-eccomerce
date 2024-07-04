@@ -4,12 +4,16 @@ import Footer from "./footer";
 import { useAppDispatch } from "../../services";
 import { getCurrentUser } from "../../services/authSlice/api";
 import { getCategories } from "../../services/categoriesSlice";
+import { loadCart } from "../../services/cartSlice";
+import { loadFavorite } from "../../services/favoriteSlice";
 
 const Layout = ({ children }: any) => {
   const dispatch = useAppDispatch();
   useEffect(() => {
     dispatch(getCurrentUser());
     dispatch(getCategories({ limit: 12 }));
+    dispatch(loadCart());
+    dispatch(loadFavorite());
   }
   , [dispatch]);
 

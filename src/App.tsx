@@ -2,6 +2,13 @@ import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/Home";
 import LoginPage from "./pages/Auth/Login";
 import { ProtectedLayout } from "./components/layout/ProtectedLayout";
+import ProductPage from "./pages/Product";
+import CartPage from "./pages/Cart";
+import AboutPage from "./pages/Static/About";
+import ContactPage from "./pages/Static/ContactUs";
+import CategoryPage from "./pages/Category";
+import FavoritesPage from "./pages/Favorites";
+import ProfilePage from "./pages/Profile";
 
 const App = () => {
   return (
@@ -11,16 +18,21 @@ const App = () => {
       {/* Auth Routes */}
       <Route path="/login" element={<LoginPage />} />
 
+      {/* Product Routes */}
+      <Route path="/product/:name/:id" element={<ProductPage />} />
+
+      <Route path="/categories" element={<CategoryPage />} />
+
       {/* Protected Routes */}
       <Route element={<ProtectedLayout />}>
-        <Route path="/profile" element={<HomePage />} />
-        <Route path="/cart" element={<HomePage />} />
-        <Route path="/favorites" element={<HomePage />} />
+        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/cart" element={<CartPage />} />
+        <Route path="/favorites" element={<FavoritesPage />} />
       </Route>
 
       {/* Static Pages */}
-      <Route path="/about" element={<HomePage />} />
-      <Route path="/contact" element={<HomePage />} />
+      <Route path="/our-story" element={<AboutPage />} />
+      <Route path="/contact-us" element={<ContactPage />} />
     </Routes>
   );
 };

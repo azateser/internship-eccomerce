@@ -5,8 +5,8 @@ import { IoMdEyeOff } from "react-icons/io";
 interface InputProps {
   label: string;
   type?: string;
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  value?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
 }
 

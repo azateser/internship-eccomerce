@@ -21,6 +21,7 @@ interface ButtonProps {
   onClick?: () => void;
   children: React.ReactNode;
   width?: string;
+  type?: 'button' | 'submit' | 'reset';
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -30,7 +31,8 @@ const Button: React.FC<ButtonProps> = ({
   disabled = false,
   onClick,
   children,
-  width = 'max-content'
+  width = 'max-content',
+  type = 'button',
 }) => {
   const buttonClass = `${styles.button} ${styles[variant]} ${styles[size]} ${disabled ? styles.disabled : ''} ${width ? styles.full : ''}`;
 
@@ -44,6 +46,7 @@ const Button: React.FC<ButtonProps> = ({
       onClick={onClick}
       disabled={disabled}
       style={buttonStyle}
+      type={type}
     >
       {children}
     </button>

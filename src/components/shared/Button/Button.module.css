@@ -31,6 +31,12 @@
   .disabled {
     background-color: #ccc;
     cursor: not-allowed;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .disabled:hover {
+    background-color: #ccc;
   }
 
   /* Sizes */

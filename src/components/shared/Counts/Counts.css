@@ -1,0 +1,15 @@
+.counts {
+  @apply text-center grid grid-cols-3 items-center justify-between md:w-40 w-full h-16  rounded-lg text-2xl;
+}
+
+.counts button {
+  @apply cursor-pointer hover:bg-primary hover:text-white h-16 flex items-center justify-center rounded-l-lg transition-all border border-solid border-primary border-r-0;
+}
+
+.counts button.increment {
+  @apply !border-r !border-l-0 !rounded-l-none !rounded-r-lg;
+}
+
+.counts span {
+  @apply cursor-pointer h-16 flex items-center justify-center border-t border-b border-primary border-solid;
+}

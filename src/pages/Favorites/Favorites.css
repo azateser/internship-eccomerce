@@ -1,0 +1,7 @@
+.favorites {
+    @apply max-w-7xl m-auto md:px-0 px-4 mb-20 my-4;
+  }
+
+    .favorites h1{
+        @apply text-3xl font-bold;
+    }

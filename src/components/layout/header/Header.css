@@ -1,40 +1,43 @@
-.header{
-    @apply w-full flex justify-between md:px-20 px-4 items-center h-24
+.header {
+  @apply w-full flex justify-between md:px-20 px-4 items-center h-24 sticky top-0 bg-white z-10;
 }
 
-.header .logo{
-    @apply text-3xl font-bold
+.header .logo {
+  @apply text-3xl font-bold;
 }
 
-.header .menu{
-    @apply items-center gap-4 md:flex hidden
+.header .menu {
+  @apply items-center gap-8 md:flex hidden;
 }
 
-.header .menu .menu-item{
-    @apply cursor-pointer
+.header .actions span {
+  @apply absolute left-2 -bottom-2 text-[10px] text-white w-5 h-5 items-center justify-center bg-red-500 rounded-full md:flex hidden;
 }
 
-.header .actions{
-    @apply flex items-center gap-6
+.header .menu .menu-item {
+  @apply cursor-pointer;
 }
 
-.header .actions .avatar{
-    @apply flex items-center gap-4
+.header .actions {
+  @apply flex items-center gap-6;
 }
 
-.header .actions .avatar img{
-    @apply w-8 h-8 rounded-full cursor-pointer
+.header .actions .avatar {
+  @apply flex items-center gap-4;
 }
 
-.header .actions .avatar li{
-    @apply flex items-center gap-2 cursor-pointer text-lg font-medium  py-2 hover:bg-gray-200 transition-all px-4
+.header .actions .avatar img {
+  @apply w-8 h-8 rounded-full cursor-pointer;
 }
 
-.header .actions .avatar .dropdown{
-    @apply absolute top-16 md:right-12 right-4 bg-white py-2 shadow-md rounded-lg
+.header .actions .avatar li {
+  @apply flex items-center gap-2 cursor-pointer text-lg font-medium  py-2 hover:bg-gray-200 transition-all px-4;
 }
 
+.header .actions .avatar .dropdown {
+  @apply absolute top-16 md:right-12 right-4 bg-white py-2 shadow-md rounded-lg;
+}
 
-.icon{
-    @apply hover:scale-110 transition-all cursor-pointer
+.icon {
+  @apply hover:scale-110 transition-all cursor-pointer;
 }
