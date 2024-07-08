@@ -12,7 +12,7 @@ import {
 import "./Header.css";
 import { useAppDispatch, useAppSelector } from "../../../services";
 import { Link, useNavigate } from "react-router-dom";
-import { setToken } from "../../../services/authSlice";
+import { logoutUser } from "../../../services/authSlice";
 import { menuItems } from "../../../constants/menuItems";
 import SearchModal from "./components/search";
 
@@ -29,10 +29,10 @@ const Header = () => {
   const totalItems = cardItems.reduce((acc, item) => acc + item.quantity, 0);
 
   const handleLogout = () => {
-    localStorage.removeItem("token");
-    dispatch(setToken(""));
+    dispatch(logoutUser());
     navigate("/login");
   };
+  
   return (
     <header className="header">
       <Link to="/" className="logo">
