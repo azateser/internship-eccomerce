@@ -20,6 +20,7 @@ import {
 const Product = ({ product }: { product: ProductType }) => {
   const dispatch = useAppDispatch();
   const favorite = useAppSelector((state) => state.favorite.items);
+  const user = useAppSelector((state) => state.auth.user);
   const [loading, setLoading] = useState(true);
 
   const handleFavoriteClick = () => {
@@ -80,6 +81,7 @@ const Product = ({ product }: { product: ProductType }) => {
             </div>
             <div className="actions group-hover:flex ">
               <div className="icons">
+              {user && Object.keys(user).length > 0 && (
                 <button onClick={handleFavoriteClick}>
                   {isFavorite(product) ? (
                     <RiHeart3Fill className="text-red-500" size={18} />
@@ -87,6 +89,7 @@ const Product = ({ product }: { product: ProductType }) => {
                     <RiHeart3Line size={18} />
                   )}
                 </button>
+              )}
                 <Link
                   to={`/product/${product.title
                     .toLowerCase()
@@ -98,16 +101,18 @@ const Product = ({ product }: { product: ProductType }) => {
                   </button>
                 </Link>
               </div>
-              <div className="add-to-cart">
-                <Button
-                  size={ButtonSize.SMALL}
-                  width="full"
-                  variant={ButtonVariant.SECONDARY}
-                  onClick={handleAddToCart}
-                >
-                  Add to Cart
-                </Button>
-              </div>
+             {user && Object.keys(user).length > 0 && (
+               <div className="add-to-cart">
+               <Button
+                 size={ButtonSize.SMALL}
+                 width="full"
+                 variant={ButtonVariant.SECONDARY}
+                 onClick={handleAddToCart}
+               >
+                 Add to Cart
+               </Button>
+             </div>
+            )}
             </div>
           </>
         )}

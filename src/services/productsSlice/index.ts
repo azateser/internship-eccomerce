@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { getProducts, getProductsById, searchProducts } from "./api";
 import { toast } from "react-toastify";
 import { Product } from "../../interfaces/product";
-export { getProducts, getProductsById };
+export { getProducts, getProductsById, searchProducts };
 
 export interface ProductState {
   products: Product[];

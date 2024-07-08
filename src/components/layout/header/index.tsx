@@ -52,13 +52,19 @@ const Header = () => {
           onClick={() => setShowSearch(true)}
         />
         <SearchModal show={showSearch} onClose={() => setShowSearch(false)} />
-        <Link to="/favorites">
-          <RiHeart3Line className="icon hidden md:block" size={24} />
-        </Link>
-        <Link to="/cart" className="relative">
-          <RiShoppingBag3Line className="hidden md:block" size={24} />
-          {totalItems > 0 && <span className="cart-count">{totalItems}</span>}
-        </Link>
+        {user && Object.keys(user).length !== 0 ? (
+          <>
+            <Link to="/favorites">
+              <RiHeart3Line className="icon hidden md:block" size={24} />
+            </Link>
+            <Link to="/cart" className="relative">
+              <RiShoppingBag3Line className="hidden md:block" size={24} />
+              {totalItems > 0 && (
+                <span className="cart-count">{totalItems}</span>
+              )}
+            </Link>
+          </>
+        ) : null}
         <RiMenuLine className="icon md:hidden block" size={24} />
         {!loading ? (
           user && Object.keys(user).length !== 0 ? (
@@ -76,11 +82,11 @@ const Header = () => {
                   className="dropdown"
                 >
                   <ul>
-                      <Link to="/profile">
-                    <li>
-                      <RiUserSmileLine size={20} /> Profile
-                    </li>
-                      </Link>
+                    <Link to="/profile">
+                      <li>
+                        <RiUserSmileLine size={20} /> Profile
+                      </li>
+                    </Link>
                     <li onClick={handleLogout}>
                       <RiLogoutCircleLine size={20} /> Logout
                     </li>

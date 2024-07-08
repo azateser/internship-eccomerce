@@ -31,20 +31,20 @@ export const searchProducts = createAsyncThunk(
     price,
     price_min,
     price_max,
-    category,
+    categoryId,
   }: {
-    title?: string;
+    title?: string | null;
     price?: number;
-    price_min?: number;
-    price_max?: number;
-    category?: string;
+    price_min?: number | null;
+    price_max?: number | null;
+    categoryId?: number | null;
   }) => {
     const response = await HttpRequest<null, Product>({
       url: `products${
         title ? `?title=${title}` : "" ||
         price ? `?price=${price}` : "" ||
         (price_min && price_max ? `?price_min=${price_min}&price_max=${price_max}` : "") ||
-        (category ? `?category=${category}` : "")
+        (categoryId ? `?categoryId=${categoryId}` : "")
       }`,
       method: RequestType.GET,
     });

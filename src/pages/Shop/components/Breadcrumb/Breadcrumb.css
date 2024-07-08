@@ -1,0 +1,7 @@
+.breadcrumb {
+  @apply flex items-center gap-2;
+}
+
+.breadcrumb a {
+  @apply hover:translate-x-1 transition-all cursor-pointer text-gray-400;
+}

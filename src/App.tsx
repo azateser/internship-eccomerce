@@ -9,6 +9,7 @@ import ContactPage from "./pages/Static/ContactUs";
 import CategoryPage from "./pages/Category";
 import FavoritesPage from "./pages/Favorites";
 import ProfilePage from "./pages/Profile";
+import ShopPage from "./pages/Shop";
 
 const App = () => {
   return (
@@ -22,6 +23,8 @@ const App = () => {
       <Route path="/product/:name/:id" element={<ProductPage />} />
 
       <Route path="/categories" element={<CategoryPage />} />
+
+      <Route path="/shop" element={<ShopPage />} />
 
       {/* Protected Routes */}
       <Route element={<ProtectedLayout />}>

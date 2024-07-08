@@ -1,0 +1,19 @@
+.shop-container {
+  @apply max-w-7xl m-auto md:px-0 px-4 mb-20 my-4;
+}
+
+.shop-container .content {
+  @apply flex md:flex-row flex-col-reverse mt-5 gap-12;
+}
+
+.shop-container .content .filterWrapper {
+  @apply md:w-1/4 w-full;
+}
+
+.filterWrapper .filterItem {
+  @apply mb-4;
+}
+
+.shop-container .content .productsWrapper {
+  @apply md:w-3/4 w-full;
+}
