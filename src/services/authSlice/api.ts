@@ -21,3 +21,12 @@ export const getCurrentUser = createAsyncThunk("currenUser", async () => {
   });
   return response;
 });
+
+export const updateUser = createAsyncThunk("updateUser", async ({ id, user }: { id: string, user: User }) => {
+  const response = await HttpRequest<User, User>({
+    url: `users/${id}`,
+    method: RequestType.PUT,
+    body: user
+  });
+  return response;
+});

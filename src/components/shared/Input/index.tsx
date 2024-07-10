@@ -8,6 +8,8 @@ interface InputProps {
   value?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
+  disabel?: boolean;
+  borderNone?: boolean;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -16,11 +18,14 @@ const Input: React.FC<InputProps> = ({
   value,
   onChange,
   placeholder,
+  disabel,
+  borderNone,
 }) => {
   const [showPassword, setShowPassword] = React.useState(false);
   return (
     <div className={styles.inputContainer}>
-      <label className={styles.label}>{label}</label>
+      <label className={styles.label} style={{ color: disabel ? "gray" : "black", userSelect: disabel || borderNone ? "none" : "auto" }}>
+        {label}</label>
       <div className={styles.inputWrapper}>
         <input
           type={
@@ -30,6 +35,8 @@ const Input: React.FC<InputProps> = ({
           onChange={onChange}
           placeholder={placeholder}
           className={styles.input}
+          disabled={disabel || borderNone}
+          style={{ border: borderNone ? "none" : "" }}
         />
         {type === "password" && (
           <IoMdEyeOff className={styles.passwordIcon} color="gray" size={24} onClick={() => setShowPassword(!showPassword)} />

@@ -36,6 +36,12 @@
   opacity: 0;
 }
 
+input:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  user-select: none;
+}
+
 .rememberMe input[type="checkbox"]:checked::before {
   opacity: 1;
 }

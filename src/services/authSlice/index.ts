@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getCurrentUser, login } from "./api";
+import { getCurrentUser, login, updateUser } from "./api";
 import { User } from "../../interfaces/user";
 import { toast } from "react-toastify";
 export { login };
@@ -58,7 +58,19 @@ export const authSlice = createSlice({
     });
     builder.addCase(getCurrentUser.rejected, (state) => {
       state.loading = false;
-      state.error = "Login Error!";
+      state.error = "Get User Error!";
+    });
+    builder.addCase(updateUser.pending, (state) => {
+      state.loading = true;
+      state.error = "";
+    });
+    builder.addCase(updateUser.fulfilled, (state, action) => {
+      state.user = action.payload;
+      state.loading = false;
+    });
+    builder.addCase(updateUser.rejected, (state) => {
+      state.loading = false;
+      state.error = "Update Error!";
     });
   },
 });
