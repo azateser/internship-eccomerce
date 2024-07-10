@@ -63,7 +63,7 @@ REST API: [Ecoomerce Platzi](https://fakeapi.platzi.com/en/about/introduction/)
 
 ## Demo
 
-[Live Demo](internship-eccomerce.vercel.app)
+[Live Demo](https://internship-eccomerce.vercel.app/)
 
 ## Installation
 
