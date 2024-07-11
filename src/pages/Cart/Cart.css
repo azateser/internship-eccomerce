@@ -11,7 +11,7 @@
 }
 
 .cart-container .content .items {
-  @apply text-4xl col-span-5;
+  @apply text-4xl md:col-span-5 col-span-7;
 }
 
 .cart-container .content .items table {
@@ -100,7 +100,7 @@ td:nth-child(5) {
 }
 
 .cart-container .content .subtotal {
-  @apply sticky top-24 col-span-2 border border-gray-200 border-solid rounded-lg p-4 h-max;
+  @apply sticky top-24 md:col-span-2 col-span-7 border border-gray-200 border-solid rounded-lg p-4 h-max;
 }
 
 .cart-container .content .subtotal .title {

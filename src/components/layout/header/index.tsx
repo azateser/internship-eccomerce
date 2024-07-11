@@ -58,7 +58,7 @@ const Header = () => {
               <RiHeart3Line className="icon hidden md:block" size={24} />
             </Link>
             <Link to="/cart" className="relative">
-              <RiShoppingBag3Line className="hidden md:block" size={24} />
+              <RiShoppingBag3Line size={24} />
               {totalItems > 0 && (
                 <span className="cart-count">{totalItems}</span>
               )}
