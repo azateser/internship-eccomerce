@@ -9,10 +9,12 @@ import './assets/css/reset.css';
 import './assets/css/global.css';
 
 import { ToastContainer } from 'react-toastify';
+import ScrollToTop from './utils/ScrollToTop';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <BrowserRouter> 
+  <ScrollToTop />
    <Provider store={store}>
     <ToastContainer />
     <App />
