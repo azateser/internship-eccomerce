@@ -8,7 +8,7 @@ const ProdcutBreadcrumb = ({ title }: { title: string }) => {
     <div className="breadcrumb">
       <Link to="/" className="">Home</Link>
       <RiArrowDropRightLine />
-      <Link to="/products">Products</Link>
+      <Link to="/shop">Products</Link>
       <RiArrowDropRightLine /> <span>{title}</span>
     </div>
   );
